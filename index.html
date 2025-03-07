@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contadores - Sistemas digitais</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Contadores - Sistemas digitais</h1>
+
+    <section class="section_entradas">
+      <div class="div_interruptor">
+        <label for="interruptor">Modo:</label>
+        <select id="interruptor">
+          <option value="1">Crescente</option>
+          <option value="0">Decrescente</option>
+        </select>
+      </div>
+
+      <div class="div_interruptor">
+        <label for="interruptor">Método:</label>
+        <select id="metodo">
+          <option value="1">Síncrono</option>
+          <option value="0">Assíncrono</option>
+        </select>
+      </div>
+      <button class="calcular" onclick="atualizar()">Iniciar simulação</button>
+    </section>
+
+    <section class="section_leds">
+      <div class="led_1" id="led1">
+        <p>LED 1</p>
+        <img
+          id="resultadoImagem1"
+          src="./Imagens/led_preto.png"
+          alt="Resultado"
+          width="200"
+        />
+      </div>
+      <div class="led_2" id="led2">
+        <p>LED 2</p>
+        <img
+          id="resultadoImagem2"
+          src="./Imagens/led_preto.png"
+          alt="Resultado"
+          width="200"
+        />
+      </div>
+      <div class="led_3" id="led3">
+        <p>LED 3</p>
+        <img
+          id="resultadoImagem3"
+          src="./Imagens/led_preto.png"
+          alt="Resultado"
+          width="200"
+        />
+      </div>
+      <div class="led_4" id="led4">
+        <p>LED 4</p>
+        <img
+          id="resultadoImagem4"
+          src="./Imagens/led_preto.png"
+          alt="Resultado"
+          width="200"
+        />
+      </div>
+
+      <div class="circuito">
+        <h3>Deslize o mouse sobre o elemento para exibir a informação!</h3>
+
+        <img
+          id="circuitoImagem"
+          src="./Imagens/2.png"
+          alt="Circuito Simulado"
+        />
+
+        <div id="tooltipsSincrono">
+          <div class="area_hover" style="top: 40%; left: 37%">
+            <div class="tooltip">
+              O <strong>Sistema Up/Down</strong> é o responsável por alternar o
+              contador entre os modos crescente e decrescente
+            </div>
+          </div>
+          
+          <div class="hotspot" style="top: 62%; left: 21%">
+            <span class="tooltip">Flip Flop JK 1</span>
+          </div>
+
+          <div class="hotspot" style="top: 62%; left: 43%">
+            <span class="tooltip">Flip Flop JK 2</span>
+          </div>
+
+          <div class="hotspot" style="top: 62%; left: 64%">
+            <span class="tooltip">Flip Flop JK 3</span>
+          </div>
+
+          <div class="hotspot" style="top: 62%; left: 86%">
+            <span class="tooltip">Flip Flop JK 4</span>
+          </div>
+          
+        </div>
+        
+        <div id="tooltipsAssincrono">
+          
+          <div class="hotspot" style="top: 52%; left: 17%">
+            <span class="tooltip">Flip Flop T 1</span>
+          </div>
+          
+          <div class="hotspot" style="top: 52%; left: 42%">
+            <span class="tooltip">Flip Flop T 2</span>
+          </div>
+          
+          <div class="hotspot" style="top: 52%; left: 65%">
+            <span class="tooltip">Flip Flop T 3</span>
+          </div>
+          
+           <div class="hotspot" style="top: 52%; left: 90%">
+            <span class="tooltip">Flip Flop T 4</span>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+  </body>
+</html>

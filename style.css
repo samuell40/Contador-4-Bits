@@ -1,0 +1,192 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section_entradas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  flex-wrap: wrap;
+}
+
+.div_interruptor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.section_leds {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.led_1, .led_2, .led_3, .led_4 {
+  width: 130px;
+  height: 120px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section_leds div p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.led_1:hover, .led_2:hover, .led_3:hover, .led_4:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  width: 90px;
+}
+
+/* Botão mais chamativo */
+.calcular {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  width: 60%;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.calcular:hover {
+  background-color: #d43f3f;
+  transform: scale(1.05);
+}
+
+.calcular:active {
+  background-color: #b53030;
+  transform: scale(0.95);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select, input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  width: 160px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.circuito {
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: inline-block;
+}
+
+.circuito img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hotspot {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.area_hover {
+  position: absolute;
+  width: 950px;
+  height: 250px;
+  background-color: transparent;
+  border: 3px solid transparent; /* Inicialmente invisível */
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 230px;
+  background-color: white;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 50px;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hotspot:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.area_hover:hover {
+  border-color: red; 
+}
+
+
+.area_hover:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Efeito de piscar os LEDs */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.blinking {
+  animation: blink 0.8s infinite alternate;
+}
